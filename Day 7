@@ -1,0 +1,27 @@
+/Ex6 Regular Expressions I
+function regexVar(s) {
+   
+    let re = /^([aeiou]).*\1$/i
+
+    return re;
+}
+
+/ ex7 egular Expressions 2
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.', 
+     * followed by one or more letters.
+    */
+    
+    const re = /^(Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
+    
+    /*
+     * Do not remove the return statement
+     */
+    return re;
+}
+/ ex8 egular Expressions 3
+function regexVar() {
+    return new RegExp(/\d+/, 'gm');
+}
