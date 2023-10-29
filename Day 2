@@ -1,0 +1,63 @@
+/ ex 3 LOOPS
+function vowelsAndConsonants(s) {
+    let vowel='aeiou';
+    let consonant='bcdfghjklmnpqrstvwxyz';
+    let str='';
+        for(let i=0;i<s.length;i++){
+        if (vowel.includes(s[i])){
+            str=str+s[i] +'\n'
+        }
+        }
+         for(let i=0;i<s.length;i++){
+        if (!vowel.includes(s[i])){
+            str=str+s[i] +'\n'
+        }
+        }
+        return console.log(str);
+}
+
+/ ex4 Conditional Statements: If-Else
+function getGrade(score) {
+    let grade;
+    if (score > 25 && score <= 30)
+        grade = 'A';
+    else if (score > 20 && score <= 25)
+        grade = 'B';
+    else if (score > 15 && score <= 20)
+        grade = 'C';
+    else if (score > 10 && score <= 15)
+        grade = 'D';
+    else if (score > 5 && score <= 10)
+        grade = 'E';
+    else if (score >= 0 && score <= 5)
+        grade = 'F';
+    else
+        grade = 'Illegal score!';
+    
+    return grade;
+}
+
+/ ex5 Conditional Statements: Switch
+function getLetter(s) {
+    let letter;
+    const A = new Set(['a','e','i','o','u']);
+    const B = new Set(['b','c','d','f','g']);
+    const C = new Set(['h','j','k','l','m']);
+
+    switch (true) {
+        case A.has(s[0]):
+            letter = 'A';
+            break;
+        case B.has(s[0]):
+            letter = 'B';
+            break;
+        case C.has(s[0]):
+            letter = 'C';
+            break;
+        default:
+            letter = 'D';
+            break;
+    }
+    return letter;
+}
+
